@@ -3,23 +3,18 @@
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width,initial-scale=1" />
-<title>Image Hover Swap</title>
+<title>Hover Swap</title>
 <style>
   :root { color-scheme: light dark; }
-  body {
-    margin: 0; display: grid; place-items: center; height: 100vh;
-    background: transparent;
-  }
-  .hover-swap {
-    width: 320px; aspect-ratio: 4/5; position: relative; cursor: pointer;
-  }
+  html,body { height: 100%; margin: 0; background: transparent; }
+  body { display: grid; place-items: center; }
+  .hover-swap { width: 320px; aspect-ratio: 4/5; position: relative; }
   .hover-swap img {
     position: absolute; inset: 0; width: 100%; height: 100%;
-    object-fit: cover; transition: opacity .25s ease;
-    border-radius: 12px;
+    object-fit: cover; border-radius: 12px; transition: opacity .25s ease;
   }
-  .hover-swap img.top { opacity: 1; }
-  .hover-swap:hover img.top { opacity: 0; }
+  .hover-swap .top { opacity: 1; }
+  .hover-swap:hover .top { opacity: 0; }
 </style>
 </head>
 <body>
